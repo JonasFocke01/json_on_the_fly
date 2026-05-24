@@ -11,4 +11,4 @@ repository = "https://github.com/JonasFocke01/json_on_the_fly/"
 anyhow = "1.0"
 serde = { version = "1.0", features = ["serde_derive"] }
 serde_json = "1.0"
-json-store-derive = "0.1"
+json-on-the-fly-derive = "0.1"

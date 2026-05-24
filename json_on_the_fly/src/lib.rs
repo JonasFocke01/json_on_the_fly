@@ -1,5 +1,5 @@
 use anyhow::Result;
-pub use json_store_derive::JsonStore;
+pub use json_on_the_fly_derive::JsonOnTheFly;
 use serde::{de::DeserializeOwned, Serialize};
 use std::{fmt::Display, fs::OpenOptions, io::Write, path::PathBuf};
 
@@ -32,7 +32,7 @@ impl std::error::Error for JsonStoreError {
     }
 }
 
-pub trait JsonStore: Serialize + DeserializeOwned + Default + Clone {
+pub trait JsonOnTheFly: Serialize + DeserializeOwned + Default + Clone {
     /// Where this trait looks for the associated file
     fn db_file_path() -> PathBuf;
 
