@@ -1,10 +1,11 @@
 # Json-on-the-fly
 
 Json-on-the-fly takes care of the boilerplate when you just want a quick way of saving a struct to a `.json` file. \
-To be even quicker, a `derive` macro is provided to make every struct capable of saving and restoring. \
+To be even quicker, a `derive` macro is provided to make every struct capable of saving and restoring.
+
 
 Json-on-the-fly is intended to make prototyping faster, not as a replacement for serde or other serializers. \
-No special `serde` syntax is supported, although it might work in your case. \
+No special `serde` syntax is supported, although it might work in your case.
 
 ## Examples
 
