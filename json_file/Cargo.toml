@@ -1,0 +1,15 @@
+[package]
+name = "json-store-derive"
+version = "0.1.0"
+edition = "2021"
+description = "A small helper crate for `json-store` that provides a derive macro"
+license = "MIT"
+repository = "https://github.com/JonasFocke01/json_store_rs/"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
