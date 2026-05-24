@@ -1,11 +1,14 @@
 [package]
 name = "json-on-the-fly"
-version = "0.1.2"
+version = "0.2.3"
 edition = "2021"
 description = "Store structs in json files on the fly and remove all boilerplate for (de-)serialization"
 license-file = "../LICENSE"
 readme = "../README.md"
 repository = "https://github.com/JonasFocke01/json_on_the_fly/"
+documentation = "https://docs.rs/json-on-the-fly/latest/json_on_the_fly/"
+categories = ["parsing", "os", "filesystem", "development-tools"]
+keywords = ["json", "file", "save", "quick", "no-boilerplate"]
 
 [dependencies]
 anyhow = "1.0"
