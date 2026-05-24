@@ -1,0 +1,15 @@
+[package]
+name = "json-on-the-fly-derive"
+version = "0.1.3"
+edition = "2021"
+description = "A small helper crate for `json-on-the-fly` that provides a derive macro"
+license = "MIT"
+repository = "https://github.com/JonasFocke01/json_on_the_fly/"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"

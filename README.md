@@ -1,11 +1,9 @@
-# Json Store
+# Json-on-the-fly
 
-Json store takes care of the boilerplate when you just want a quick way of saving a struct to a `.json` file. \
+Json-on-the-fly takes care of the boilerplate when you just want a quick way of saving a struct to a `.json` file. \
 To be even quicker, a `derive` macro is provided to make every struct capable of saving and restoring. \
 
-
-
-Json store is intended to make prototyping faster, not as a replacement for serde or other serializers. \
+Json-on-the-fly is intended to make prototyping faster, not as a replacement for serde or other serializers. \
 No special `serde` syntax is supported, although it might work in your case. \
 
 ## Examples
@@ -14,16 +12,16 @@ Add this to your `Cargo.toml`:
 
 ```toml
 serde = { version = "1.0", features = ["serde_derive"] }
-json-store = "0.1"
+json-on-the-fly = "0.1"
 ```
 
 ### Derive
 
 ```rust
-use json_store::JsonStore;
+use json_on_the_fly::JsonOnTheFly;
 use serde::{Deserialize, Serialize};
 
-#[derive(JsonStore, Serialize, Deserialize, Default, Clone, Debug)]
+#[derive(JsonOnTheFly, Serialize, Deserialize, Default, Clone, Debug)]
 struct Color {
     red: u8,
     green: u8,
@@ -53,7 +51,7 @@ The manual implementation for your struct has the advantage, that you can define
 Only the function returning that name has to be implemented.
 
 ```rust
-use json_store::JsonStore;
+use json_on_the_fly::JsonOnTheFly;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Default, Clone, Debug)]
@@ -66,8 +64,8 @@ struct Color {
 impl JsonStore for Color {
     fn db_file_path() -> std::path::PathBuf {
         let mut path = std::env::current_dir().unwrap();
-        path.push("Color");
-        path.set_extension("json");
+        path.push("MyColor");
+        path.set_extension("my_json");
         path
     }
 }

@@ -1,11 +1,11 @@
 [package]
-name = "json-store"
+name = "json-on-the-fly"
 version = "0.1.2"
 edition = "2021"
 description = "Store structs in json files on the fly and remove all boilerplate for (de-)serialization"
 license-file = "../LICENSE"
 readme = "../README.md"
-repository = "https://github.com/JonasFocke01/json_store_rs/"
+repository = "https://github.com/JonasFocke01/json_on_the_fly/"
 
 [dependencies]
 anyhow = "1.0"
